@@ -6,10 +6,14 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Lorem ipsum"
-description              : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. "
-repository               : "RayeRen/acad-homepage.github.io"
+title                    : "Haohua Duan | 段皓铧"
+description              : "Applied Cryptography × Trustworthy AI. Zero-knowledge proofs and verifiable computation for secure, private, and verifiable intelligent systems."
+url                      : "https://excellenthh.github.io"
+baseurl                  : ""
+repository               : "ExcellentHH/excellenthh.github.io"
+google_scholar_stats_enabled : false
 google_scholar_stats_use_cdn : true
+analytics_enabled        : false
 
 # google analytics
 google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
@@ -21,31 +25,34 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "Lorem ipsum"
-  avatar           : "images/android-chrome-512x512.png"
-  bio              : "Lorem ipsum College"
-  location         : "Beijing, China"
-  employer         :
+  name             : "Haohua Duan | 段皓铧"
+  avatar           : "/images/profile.jpg"
+  bio              : "Applied Cryptography × Trustworthy AI · LLM Security"
+  role             : "Lecturer（讲师） / Master's Supervisor（硕士生导师）"
+  school           : "School of Information Science and Engineering"
+  location         :
+  employer         : "East China University of Science and Technology"
+  cv               : # TODO: /files/Haohua_Duan_CV.pdf
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
-  email            : "Lorem@ipsum.com"
+  googlescholar    : 'https://scholar.google.com/scholar?q=author%3A%22Haohua%20Duan%22'
+  email            : "duanhaohua@ecust.edu.cn"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
-  uri              :
+  uri              : "https://faculty.ecust.edu.cn/cise/dhh/main.htm"
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
   facebook         :
   foursquare       :
-  github           : # e.g., "github username"
+  github           : "ExcellentHH"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : # e.g., "https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         : # e.g., "linkedin username"
-  dblp             : # e.g., "https://dblp.org/pid/xx/xxxx.html"
-  orcid            : # e.g., "https://orcid.org/xxxx"
+  dblp             : "https://dblp.org/pid/351/0141.html"
+  orcid            : "https://orcid.org/0000-0002-7508-6852"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
@@ -65,6 +72,16 @@ include:
   - _pages
   - files
 exclude:
+  - AGENTS.md
+  - HOMEPAGE_SPEC.md
+  - LINKS.md
+  - TODO.md
+  - BUILD_CHECKS.md
+  - README.md
+  - files/README.md
+  - images/PVMark_CCSC2026_Certificate_backup.jpg
+  - Gemfile.lock
+  - run_server.sh
   - docs
   - google_scholar_crawler
   - "*.sublime-project"
@@ -153,11 +170,4 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jemoji
-
-
-# HTML Compression
-# - http://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
+  - jekyll-redirect-from

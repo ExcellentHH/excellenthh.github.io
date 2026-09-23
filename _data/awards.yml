@@ -1,0 +1,4 @@
+# User-supplied certificate; wording checked against the image.
+pvmark:
+  certificate_image: "/images/PVMark_CCSC2026_Certificate.jpg"
+  certificate_alt: "PVMark award certificate, CCSC 2026"

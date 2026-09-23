@@ -1,0 +1,74 @@
+# Academic metadata comes from HOMEPAGE_SPEC.md. Empty URLs/images are TODOs.
+# Add local files to files/ and set their URLs below to enable viewing/download.
+- id: pvmark
+  short_title: PVMark
+  title: "PVMark: Enabling Public Verifiability for LLM Watermarking Schemes"
+  authors: [Haohua Duan, Liyao Xiang, Xin Zhang, Baochun Li, Bo Li]
+  corresponding_authors: [Liyao Xiang]
+  venue: "USENIX Security 2026"
+  ccf_rank: "CCF-A"
+  image: "/images/pvmark.png"
+  image_width: 1800
+  image_height: 1336
+  image_alt: "PVMark system and public verification workflow"
+  summary: "PVMark enables third parties to verify the correctness of LLM watermark detection without revealing the secret watermark key."
+  links:
+    - label: Paper
+      url: "/images/PVMark-duan.pdf"
+      new_tab: true
+    - label: Code
+      url: "https://github.com/ExcellentHH/PVMark"
+    - label: "Slides (PDF)"
+      url: "/images/PVMark_slides.pdf"
+      new_tab: true
+    - label: "Poster (PDF)"
+      url: "/images/PVMark_Poster.pdf"
+      new_tab: true
+    - label: "Figure (PDF)"
+      url: "/images/PVMark_framework.pdf"
+      new_tab: true
+    - label: Patent
+      url: "/#patent-pvmark"
+    - label: USENIX
+      url: "https://www.usenix.org/conference/usenixsecurity26/presentation/duan"
+- id: verifiable-fl
+  short_title: Verifiable Federated Learning
+  title: "A Verifiable and Privacy-Preserving Federated Learning Training Framework"
+  authors: [Haohua Duan, Zedong Peng, Liyao Xiang, Yuncong Hu, Bo Li]
+  corresponding_authors: [Liyao Xiang]
+  venue: "IEEE Transactions on Dependable and Secure Computing (TDSC), 2024"
+  ccf_rank: "CCF-A"
+  badge: "IEEE TDSC 2024"
+  image: "/images/verifiable-fl.png"
+  image_width: 1564
+  image_height: 1600
+  image_alt: "Verifiable federated learning framework overview"
+  links:
+    - label: Paper
+      url: "https://doi.org/10.1109/TDSC.2024.3369658"
+    - label: Code
+      url: "https://github.com/ExcellentHH/sumcheck-matrix-ops"
+    - label: "Overview (PDF)"
+      url: "/images/VPNNT_framework_1.pdf"
+      new_tab: true
+    - label: "Training (PDF)"
+      url: "/images/VPNNT_framework_2.pdf"
+      new_tab: true
+- id: terrace
+  short_title: Terrace / General-Circuit ZKP
+  title: "A New Zero Knowledge Argument for General Circuits and Its Application"
+  authors: [Haohua Duan, Liyao Xiang, Xinbing Wang, Pengzhi Chu, Chenghu Zhou]
+  corresponding_authors: [Liyao Xiang]
+  venue: "IEEE Transactions on Information Forensics and Security (TIFS), 2023"
+  ccf_rank: "CCF-A"
+  badge: "IEEE TIFS 2023"
+  image: "/images/terrace.png"
+  image_width: 1251
+  image_height: 2200
+  image_alt: "Terrace circuit transformation example"
+  links:
+    - label: Paper
+      url: "https://doi.org/10.1109/TIFS.2023.3288454"
+    - label: "Circuit (PDF)"
+      url: "/images/Terrace_example.pdf"
+      new_tab: true

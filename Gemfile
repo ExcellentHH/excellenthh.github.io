@@ -9,7 +9,11 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 
-gem "github-pages", group: :jekyll_plugins
+gem "github-pages", "= 232", group: :jekyll_plugins
+# Match the Pages-compatible Nokogiri version; the old lock required Ruby < 3.2.
+gem "nokogiri", "= 1.16.7"
+# Required by `jekyll serve` on modern Ruby.
+gem "webrick", "~> 1.8"
 
 # If you want to use Jekyll native, uncomment the line below.
 # To upgrade, run `bundle update`.
@@ -23,5 +27,4 @@ group :jekyll_plugins do
   # gem "jekyll-archives"
   gem "jekyll-feed"
   gem 'jekyll-sitemap'
-  gem 'hawkins'
 end
