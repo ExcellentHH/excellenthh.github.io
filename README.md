@@ -1,72 +1,92 @@
+# Haohua Duan — academic homepage
 
-<h1 align="center">
-AcadHomepage
-</h1>
+English academic homepage for Haohua Duan (段皓铧), based on [AcadHomepage](https://github.com/RayeRen/acad-homepage.github.io). The existing Jekyll, Liquid, Sass, and responsive sidebar architecture is retained.
 
-<div align="center">
+## Homepage V1
 
-[![](https://img.shields.io/github/stars/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/forks/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/issues/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io)
-[![](https://img.shields.io/github/license/RayeRen/acad-homepage.github.io)](https://github.com/RayeRen/acad-homepage.github.io/blob/main/LICENSE)  | [中文文档](./docs/README-zh.md) 
-</div>
+The page contains About Me, Education & Experience, Research Interests, News, Selected Publications, Honors & Awards, Patents, and Teaching, in that order. The student invitation appears at the end of About Me.
 
-<p align="center">A Modern and Responsive Academic Personal Homepage</p>
+The research identity is **Applied Cryptography × Trustworthy AI**. Existing publications are distinguished from current interests in LLM security, agent security, and energy data security.
 
-<p align="center">
-    <br>
-    <img src="docs/screenshot.png" width="100%"/>
-    <br>
-</p>
+Homepage V1 was developed on `homepage-v1`. The user has authorized merging to `main` and publishing at https://excellenthh.github.io. GitHub Pages uses the `main` branch root. Missing sidebar resources are hidden; remaining material needs are tracked in TODO.md. See [TODO.md](TODO.md) and [BUILD_CHECKS.md](BUILD_CHECKS.md).
 
-Some examples:
-- [Demo Page](https://rayeren.github.io/acad-homepage.github.io/)
-- [Personal Homepage of the author](https://rayeren.github.io/)
+## Content maintenance
 
-## Key Features
-- **Automatically update google scholar citations**: using the google scholar crawler and github action, this REPO can update the author citations and publication citations automatically.
-- **Support Google analytics**: you can trace the traffics of your homepage by easy configuration.
-- **Responsive**: this homepage automatically adjust for different screen sizes and viewports.
-- **Beautiful and Simple Design**: this homepage is beautiful and simple, which is very suitable for academic personal homepage.
-- **SEO**: search Engine Optimization (SEO) helps search engines find the information you publish on your homepage easily, then rank it against similar websites.
+- `_config.yml`: profile, site identity, and feature flags.
+- `_pages/about.md`: homepage prose, news, patents, teaching, and experience.
+- `_data/publications.yml`: all three papers and resource links. PVMark appears once, with its summary and all research resources.
+- `_data/awards.yml`: award certificate image path and alternative text.
+- `_data/navigation.yml`: navigation labels and explicit section anchors.
+- `_includes/paper-card.html` and `_includes/research-links.html`: reusable native `paper-box` presentation.
+- `_sass/_homepage.scss`: focused homepage styles, imported by `assets/css/main.scss`.
+- `images/`: profile and research images when supplied. Set the corresponding image field only after the file exists.
+- `files/`: CV, poster, and slides when supplied. See `files/README.md` for filenames.
+- `LINKS.md`: supplied links and pending verification. This inventory does not generate the website; update the relevant configuration or paper record too.
 
-## Quick Start
+An empty paper URL renders a TODO label. An empty image field renders an HTML/CSS placeholder with no request to a nonexistent file. A missing profile URL or CV is omitted from the sidebar. The existing template favicons are temporary; no personal photo or research figure has been invented or downloaded.
 
-1. Fork this REPO and rename to `USERNAME.github.io`, where `USERNAME` is your github USERNAME.
-1. Configure the google scholar citation crawler:
-    1. Find your google scholar ID in the url of your google scholar page (e.g., https://scholar.google.com/citations?user=SCHOLAR_ID), where `SCHOLAR_ID` is your google scholar ID.
-    1. Set GOOGLE_SCHOLAR_ID variable to your google scholar ID in `Settings -> Secrets -> Actions -> New repository secret` of the REPO website with `name=GOOGLE_SCHOLAR_ID` and `value=SCHOLAR_ID`.
-    1. Click the `Action` of the REPO website and enable the workflows by clicking *"I understand my workflows, go ahead and enable them"*. This github action will generate google scholar citation stats data `gs_data.json` in `google-scholar-stats` branch of your REPO. When you update your main branch, this action will be triggered. This action will also be trigger 08:00 UTC everyday.
-1. Generate favicon using [favicon-generator](https://redketchup.io/favicon-generator) and download all generated files to `REPO/images`.
-1. Modify the configuration of your homepage `_config.yml`:
-    1. `title`: the title of your homepage
-    1. `description`: the description of your homepage
-    1. `repository`: USER_NAME/REPO_NAME  
-    1. `google_analytics_id` (optional): google analytics ID
-    1. SEO Related keys (optional): get these keys from search engine consoles (e.g. Google, Bing and Baidu) and paste here.
-    1. `author`: the author information of this homepage, including some other websites, emails, city and univeristy.
-    1. More configuration details are described in the comments.
-1. Add your homepage content in `_pages/about.md`.
-    1. You can use html+markdown syntax just same as jekyll.
-    1. You can use a `<span>` tag with class `show_paper_citations` and attribute `data` to display the citations of your paper. Set the data to the google scholar paper ID. For
-        ```html
-        <span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span>
-        ``` 
-        > Q: How to get the google scholar paper ID?   
-        > A: Enter your google scholar homepage and click the paper name. Then you can see the paper ID from `citation_for_view=XXXX`, where `XXXX` is the required paper ID.
-1. Your page will be published at `https://USERNAME.github.io`.
+The Scholar crawler has no automatic triggers and its job is disabled. The front-end Scholar and Analytics flags are false. Do not enable them without explicit authorization.
 
-## Debug Locally
+## Adding certificates, posters, and slides
 
-1. Clone your REPO to local using `git clone`.
-1. Install Jekyll building environment, including `Ruby`, `RubyGems`, `GCC` and `Make` following [the installation guide](https://jekyllrb.com/docs/installation/#requirements).
-1. Run `bash run_server.sh` to start Jekyll livereload server.
-1. Open http://127.0.0.1:4000 in your browser.
-1. If you change the source code of the website, the livereload server will automatically refresh.
-1. When you finish the modification of your homepage, `commit` your changings and `push` to your remote REPO using `git` command.
+Upload/copy approved files into this repository, then fill their paths in the data files. This is the maintenance workflow for the static site; the page itself does not store visitor uploads.
 
-# Acknowledges
+All homepage images belong in the root `images/` directory:
 
-- AcadHomepage incorporates Font Awesome, which is distributed under the terms of the SIL OFL 1.1 and MIT License.
-- AcadHomepage is influenced by the github repo [mmistakes/minimal-mistakes](https://github.com/mmistakes/minimal-mistakes), which is distributed under the MIT License.
-- AcadHomepage is influenced by the github repo [academicpages/academicpages.github.io](https://github.com/academicpages/academicpages.github.io), which is distributed under the MIT License.
+| Image | Suggested filename | Configuration |
+| --- | --- | --- |
+| Portrait | `profile.jpg` | `_config.yml`: `author.avatar` |
+| PVMark overview | `pvmark.png` | `_data/publications.yml`: PVMark `image` |
+| Verifiable FL overview | `verifiable-fl.png` | `_data/publications.yml`: FL `image` |
+| Terrace overview | `terrace.png` | `_data/publications.yml`: Terrace `image` |
+| Award certificate | `PVMark_CCSC2026_Certificate.jpg` | `_data/awards.yml`: `pvmark.certificate_image` |
+
+Use paths such as `/images/profile.jpg` in configuration. If the supplied file has a different extension, update the path accordingly. Copying a file alone does not replace a TODO; its configuration field must also be filled.
+
+
+- Certificate: put a JPG, PNG, or WebP in `images/`, then set `pvmark.certificate_image` in `_data/awards.yml`. Honors shows a responsive thumbnail. Clicking it opens the template's image viewer; the link also opens the original image when JavaScript is unavailable.
+- Poster: put the PDF in `files/`, then set the `Poster (PDF)` URL in `_data/publications.yml`.
+- Slides: the supplied PDF is available for browser viewing. No PPT/PPTX button or upload is currently required.
+- `new_tab: true` opens a resource in a new tab, suitable for PDFs; browser/device PDF settings determine whether it previews or downloads. `download: true` offers the original local file for download. PPT/PPTX is paired with a PDF for browser reading.
+- More resources can be added as additional items in the paper's `links` array; there is no fixed button limit.
+
+Do not fill a local URL until its file exists. Missing files remain non-clickable TODO labels. For new awards, check the wording against their certificate before removing any TODO.
+
+## Currently integrated assets
+
+The supplied originals remain in `images/`. Portrait and certificate are connected. Publication figures `pvmark.png`, `verifiable-fl.png`, and `terrace.png` are Poppler renders of `PVMark_framework.pdf`, `VPNNT_framework_1.pdf`, and `Terrace_example.pdf`, respectively; each supports full-size viewing and a source PDF link. The second FL diagram is available as Training (PDF).
+
+PVMark Paper, Poster (PDF), and Slides (PDF) now point to `images/PVMark-duan.pdf`, `images/PVMark_Poster.pdf`, and `images/PVMark_slides.pdf`. These existing files do not need to be copied into `files/`. CV is still missing. The original PPT/PPTX button was removed at the user's request; Slides (PDF) remains available.
+
+The certificate supplies the conference name China Cyber Security Congress and the award text 最佳海报, translated on the page as Best Poster Award.
+
+## Local build and preview
+
+Use Ruby 3.2 with Bundler 2.5.23, preferably Linux or WSL on Windows. GitHub Pages dependencies are pinned to `github-pages 232`, Jekyll 3.10.0, and Nokogiri 1.16.7. Dependency reference: https://pages.github.com/versions/.
+
+```bash
+gem install --user-install bundler -v 2.5.23
+export PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+bundle config set --local path vendor/bundle
+bundle install
+bundle exec jekyll build --safe --strict_front_matter --trace
+bash run_server.sh
+```
+
+Open http://127.0.0.1:4000. The preview script uses polling so edits on a Windows-mounted WSL directory are detected. Restart the server after changing `_config.yml`. Native Windows Ruby installation has not been tested; use the WSL path above.
+
+`AGENTS.md`, `HOMEPAGE_SPEC.md`, `LINKS.md`, `TODO.md`, `BUILD_CHECKS.md`, and maintenance READMEs are excluded from the generated site. The license and upstream credits remain in this repository.
+
+## Publication, only when explicitly requested
+
+Before publication, supply the missing material, resolve the award wording and patent-link TODOs, build again, and check desktop/mobile layouts and resource links. Then review GitHub Pages source settings for `ExcellentHH/excellenthh.github.io`. The release uses GitHub Pages' built-in branch deployment; no custom publishing workflow is required.
+
+## Credits
+
+Based on RayeRen's AcadHomepage and its Minimal Mistakes / Academic Pages foundations. Preserve the repository LICENSE and the existing third-party Font Awesome, Academicons, and theme attribution notices.
+
+## Contact and teaching details
+
+Email is displayed as [at] / [dot] text in the sidebar and recruitment section; the homepage does not emit a raw mailto address. This is simple obfuscation, not guaranteed crawler protection. DBLP and ORCID are connected after cross-checking publication identifiers. Each paper record uses `corresponding_authors` to mark the requested names with a superscript asterisk. Teaching semesters are explicit; update the current-semester note when Fall 2026 ends.
+
+Google Scholar links use the requested author search because no personal profile exists. Both sidebar and publication links identify this as a search. The About Me intro banner is removed; the sidebar includes LLM Security, while research details remain in Research Interests.

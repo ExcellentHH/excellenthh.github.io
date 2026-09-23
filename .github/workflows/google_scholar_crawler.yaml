@@ -1,12 +1,13 @@
 name: Get Citation Data
 
-on: 
- page_build: 
- schedule:
-  - cron:  '0 8 * * *'
+# V1: no automatic triggers; the job also remains disabled for manual runs.
+# Re-enable only after explicit authorization to use the Scholar crawler.
+on:
+  workflow_dispatch:
 
 jobs:
   build:
+    if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2

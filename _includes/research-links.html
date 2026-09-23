@@ -1,0 +1,10 @@
+<div class="research-links" aria-label="{{ include.paper.short_title | escape }} resources">
+  {% for link in include.paper.links %}
+    {% if link.url and link.url != empty %}
+      {% assign prefix = link.url | slice: 0, 1 %}
+      <a class="research-link" href="{% if prefix == '/' %}{{ link.url | relative_url }}{% else %}{{ link.url | escape }}{% endif %}"{% if link.download %} download aria-label="Download {{ link.label | escape }}"{% elsif link.new_tab %} target="_blank" rel="noopener noreferrer" aria-label="View {{ link.label | escape }} (opens in a new tab)"{% endif %}>{{ link.label }}{% if link.download %} <small>Download</small>{% endif %}</a>
+    {% else %}
+      <span class="research-link research-link--pending" title="TODO: {{ link.label }} resource has not been provided">{{ link.label }} <small>TODO</small></span>
+    {% endif %}
+  {% endfor %}
+</div>

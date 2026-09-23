@@ -1,0 +1,10 @@
+{% if include.award.certificate_image and include.award.certificate_image != empty %}
+<figure class="award-certificate">
+  <a class="image-popup" href="{{ include.award.certificate_image | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="View full-size {{ include.award.certificate_alt | escape }}">
+    <img src="{{ include.award.certificate_image | relative_url }}" alt="{{ include.award.certificate_alt | escape }}" loading="lazy">
+  </a>
+  <figcaption>View full-size certificate</figcaption>
+</figure>
+{% else %}
+<p class="certificate-placeholder todo-note">Award certificate image · TODO</p>
+{% endif %}

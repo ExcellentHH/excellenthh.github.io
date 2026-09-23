@@ -1,3 +1,10 @@
 _site/
 push.sh
 .DS_Store
+.bundle/
+.jekyll-cache/
+.sass-cache/
+.jekyll-metadata
+vendor/bundle/
+# Local-only source backup; the active certificate is tracked separately.
+images/PVMark_CCSC2026_Certificate_backup.jpg

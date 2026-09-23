@@ -1,0 +1,6 @@
+# Keep the preview script executable by Bash after Windows checkouts.
+*.sh text eol=lf
+# PDF streams must not be changed by Windows newline normalization.
+*.pdf binary
+# Markdown uses trailing spaces for intentional hard line breaks.
+*.md whitespace=-blank-at-eol
