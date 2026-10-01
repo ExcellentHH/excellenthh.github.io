@@ -23,7 +23,7 @@ Homepage V1 was developed on `homepage-v1`. The user has authorized merging to `
 - `files/`: CV, poster, and slides when supplied. See `files/README.md` for filenames.
 - `LINKS.md`: supplied links and pending verification. This inventory does not generate the website; update the relevant configuration or paper record too.
 
-An empty paper URL renders a TODO label. An empty image field renders an HTML/CSS placeholder with no request to a nonexistent file. A missing profile URL or CV is omitted from the sidebar. The existing template favicons are temporary; no personal photo or research figure has been invented or downloaded.
+An empty paper URL renders a TODO label. An empty image field renders an HTML/CSS placeholder with no request to a nonexistent file. A missing profile URL or CV is omitted from the sidebar. The personal favicon uses a white D on the existing blue circle, with an editable source at `images/favicon.svg` and matching browser/mobile raster icons.
 
 The Scholar crawler has no automatic triggers and its job is disabled. The front-end Scholar and Analytics flags are false. Do not enable them without explicit authorization.
 

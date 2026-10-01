@@ -1,5 +1,11 @@
 # Homepage V1 — implementation and checks
 
+## Personal favicon — 2026-10-01
+
+Replaced the template's white A on a blue circle with the user-requested white D, preserving the blue color and transparent corners. `images/favicon.svg` is the editable vector source; the five PNG icons and six-size `favicon.ico` use the same geometry. Browser links and manifest icon URLs include a version marker to refresh cached assets.
+
+Modified `_includes/head/custom.html`, `images/site.webmanifest`, the six existing icon assets, README.md, TODO.md, and this report; added `images/favicon.svg`. The production Jekyll build passed using the existing WSL dependency cache. Generated HTML references, manifest targets, PNG dimensions/transparency, ICO sizes, and `git diff --check` passed. The D design was visually inspected. No new TODOs; the existing optional CV remains missing. The user explicitly authorized publication on 2026-10-01; deployment is checked after pushing to `main`.
+
 Date: 2026-09-23 (Asia/Shanghai)
 
 ## Delivery state

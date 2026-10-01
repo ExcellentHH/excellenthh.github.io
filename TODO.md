@@ -31,7 +31,7 @@ Portrait and certificate are user-supplied. The three PNG figures are rendered f
 - [x] School email displayed using [at] / [dot] at the user's request; no raw mailto link is emitted in homepage HTML.
 - [ ] Confirm the selected tagline: Applied Cryptography × Trustworthy AI.
 - [ ] Optional: approve “Prior experience in cryptography is helpful but not required.” This optional sentence is currently omitted.
-- [ ] Optional: replace the template favicon set with personal icons; update the manifest if filenames change.
+- [x] Replace the template favicon set with the requested white D on a blue circle; browser and mobile icons are synchronized.
 - [ ] Before publication, check all external resource destinations. This implementation does not claim independent verification of supplied academic records.
 
 ## Release boundary
